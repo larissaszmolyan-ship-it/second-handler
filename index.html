@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Second Handler – Luxusverleih</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --burgundy: #6b0f1a;
+      --black: #0e0e0e;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--burgundy);
+      color: var(--white);
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      animation: fadeDown 1.5s ease;
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      background-color: var(--black);
+      padding: 15px 10%;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--burgundy);
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    .intro {
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 220px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .product-card h3 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
+
+    .brands {
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+
+    .brands h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 30px;
+    }
+
+    .brand-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      font-weight: 500;
+    }
+
+    .brand-list span {
+      padding: 10px 18px;
+      border: 1px solid var(--burgundy);
+      color: var(--burgundy);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .brand-list span:hover {
+      background-color: var(--burgundy);
+      color: var(--white);
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      padding: 50px 10%;
+      text-align: center;
+    }
+
+    footer h3 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SECOND HANDLER</h1>
+    <p>Luxusverleih für exklusive Designerstücke</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Produkte</a>
+    <a href="#brands">Marken</a>
+    <a href="#impressum">Impressum</a>
+  </nav>
+
+  <section id="home" class="intro">
+    <h2>Luxus leihen statt besitzen</h2>
+    <p>
+      Second Handler ist eine exklusive Luxusverleih für Frauen und Männer.
+      Bei uns kannst du hochwertige Designerstücke ausleihen – nachhaltig, stilvoll und flexibel.
+    </p>
+  </section>
+
+  <section id="products">
+    <h2 style="font-family: 'Playfair Display', serif; text-align:center;">Unsere Highlights</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="dior bag.png" alt="Dior Tasche">
+        <h3>Dior Handtasche</h3>
+        <p>Elegante Luxustasche – perfekt für besondere Anlässe.</p>
+      </div>
+
+      <div class="product-card">
+        <img src="higheelsprada.png" alt="Prada High Heels">
+        <h3>Prada High Heels</h3>
+        <p>Ikonisches Design für einen stilvollen Auftritt.</p>
+      </div>
+
+      <div class="product-card">
+        <img src="Logo.png" alt="Second Handler Logo">
+        <h3>Second Handler Selection</h3>
+        <p>Kuratiertes Luxus-Sortiment für Damen & Herren.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="brands" class="brands">
+    <h2>Unsere Marken</h2>
+    <div class="brand-list">
+      <span>Prada</span>
+      <span>Dior</span>
+      <span>Gucci</span>
+      <span>Guess</span>
+      <span>Versace</span>
+      <span>Cartier</span>
+      <span>Rolex</span>
+      <span>Vivienne Westwood</span>
+      <span>Swarovski</span>
+    </div>
+  </section>
+
+  <footer id="impressum">
+    <h3>Impressum</h3>
+    <p>
+      Second Handler<br>
+      Luxusverleih<br>
+      Mariahilfer Straße 1<br>
+      1060 Wien-Mariahilf<br><br>
+      E-Mail: info@secondhandler.at<br>
+      Telefon: +43 000 000000
+    </p>
+  </footer>
+
+</body>
+</html>
